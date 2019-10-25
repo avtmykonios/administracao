@@ -1,0 +1,37 @@
+<table>
+
+	<tr>
+		<td>
+			<strong>
+				Prezado(s), 
+			</strong>
+
+		</td>
+	</tr>
+	<tr>
+		<td>
+			O contrato do cliente <?php echo $acordo["Cliente"]; ?> – Nº: <?php echo $acordo["NumeroProposta"]; ?> / Edital/Proposta: <?php echo $acordo["NumeroEdital"]; ?> (<?php echo $acordo["AcordoNroSAP"]; ?>), deverá ser REAJUSTADO dia <span style="color:red;"><?php echo $acordo["dataPrevisaoInicial"]; ?></span> com <?php echo $acordo["QtdeDiasVencer"]; ?> dias a partir de hoje.<br/><br/>
+
+		</td>
+	</tr>
+	<tr>
+		<table style="width:100%; border-collapse: collapse; text-align: center" border="1">
+			<th bgcolor="#000080" style="color:#fff;">Cliente</th>
+			<th bgcolor="#000080" style="color:#fff;">Contrato</th>
+			<th bgcolor="#000080" style="color:#fff;">Edital Proposta</th>
+			<th bgcolor="#000080" style="color:#fff;">Contrato SAP</th>
+			<th bgcolor="#000080" style="color:#fff;">Data Início Vigência</th>
+			<th bgcolor="#000080" style="color:#fff;">Data Prevista Reajuste</th>
+			<th bgcolor="#000080" style="color:#fff;">Filial</th>
+			<tbody>
+				<td style="padding:12px"><?php echo $acordo["Cliente"];?></td>
+				<td style="padding:12px"><?php echo $acordo["NumeroProposta"];?></td>
+				<td style="padding:12px"><?php echo $acordo["NumeroEdital"];?></td>
+				<td style="padding:12px"><?php echo $acordo["AcordoNroSAP"];?></td>	
+				<td style="padding:12px"><?php echo $acordo["DataIniVigencia"];?></td>
+				<td style="padding:12px" style="color:red;"><?php echo $acordo["dataPrevisaoInicial"];?></td>
+				<td style="padding:12px"><?php echo $acordo["Filial"];?></td>
+			</tbody>
+		</table>
+	</tr>
+</table>
