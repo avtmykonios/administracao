@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+
+<style>label { display: block; }</style>
+<script type="text/javascript">
+	"use strict";
+
+	var marcados = 0;
+	var verifyCheckeds = function($checks) {
+		if( marcados >= 1 ) {
+            alert('aqui 2');
+            var inputs = $('input[type=checkbox]');
+
+            inputs.attr('checked', false);
+            inputs.prop('checked', false);            
+			//loop($checks, function($element) {
+				//$element.disabled = $element.checked ? '' : 'disabled';
+			//});
+		} else {
+			loop($checks, function($element) {
+				$element.disabled = '';
+			});
+		}
+	};
+	var loop = function($elements, cb) {
+		var max = $elements.length;
+		while(max--) {
+			cb($elements[max]);
+		}
+	}
+	var count = function($element) {
+		return $element.checked ? marcados + 1 : marcados - 1;
+	}
+
+
+
+    function marcardesmarcar(id){
+        alert('aqui 1');
+        alert(id);
+        /*$('.desmarcar').each(
+            inputs = $('input[type=checkbox]');
+            inputs.attr('checked', false);
+            inputs.prop('checked', false);            
+        );*/
+        
+        
+        
+        /*var $checks = document.querySelectorAll('input[type="checkbox"]');
+        alert($checks);
+		loop($checks, function($element) {
+			$element.onclick = function(){
+				marcados = count(this);
+				verifyCheckeds($checks);
+			}
+			if($element.checked) marcados = marcados + 1;
+		});
+		verifyCheckeds($checks); */   
+    };
+
+</script>
+</head>
+<body>
+
+	<label><input type="checkbox" value="1" class="desmarcar" onClick='marcardesmarcar(1);'/>Item 1</label>
+	<label><input type="checkbox" value="2" class="desmarcar" onClick='marcardesmarcar(2);'/>Item 2</label>
+	<label><input type="checkbox" value="3" class="desmarcar" onClick='marcardesmarcar(3);'/>Item 3</label>
+	<label><input type="checkbox" value="4" class="desmarcar" onClick='marcardesmarcar(4);'/>Item 4</label>
+	<label><input type="checkbox" value="5" class="desmarcar" onClick='marcardesmarcar(5);'/>Item 5</label>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
